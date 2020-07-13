@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, .5)
+        }
+
+        a {
+            color: linen;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>React getting started</h1>
+    <hr>
+    <ol>
+        <li>Overview</li>
+        <li>item 1</li>
+        <li>item 1</li>
+        <li>item 1</li>
+        <li>item 1</li>
+    </ol>
+
+    <div id="slides">
+        <div hidden>
+            <h1>Why &#9728; &#9964;</h1>
+            <h2>Problems in javascript</h2>
+
+        </div>
+
+       
+        <div hidden>
+            <h1>Basic</h1>
+            <ol>
+                <li>Contain types</li>
+                <li>New development of ESNext</li>
+                <li>need: nodejs , typescript transpiler</li>
+            </ol>
+        </div>
+        <div hidden>
+            <h1>slide III</h1>
+        </div>
+        <div hidden>
+            <h1>Slide IV</h1>
+        </div>
+        <div hidden>
+            <h1>NEW Slide V</h1>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('ol').addEventListener('click', showSlide)
+
+        function showSlide(e) {
+            const p = e.target.parentElement
+            const index = Array.from(p.children).indexOf(e.target)
+            const slide = document.querySelector('#slides').children[index];
+            slide.style.position = 'absolute'
+            slide.style.top = 0;
+            slide.style.left = 0;
+            slide.style.width = '100vw';
+            slide.style.height = '100vh';
+            slide.style.zIndex = 10;
+            slide.style.color = 'rgba(255,255,255,1)';
+            slide.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            slide.addEventListener('click', (e) => {
+                slide.hidden = true;
+            })
+            slide.hidden = false;
+        }
+    </script>
+</body>
+
+</html>
