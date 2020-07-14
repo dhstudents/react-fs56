@@ -1,2 +1,10 @@
 git remote add origin https://github.com/dhstudents/react-fs56.git
 git push -u origin master
+
+
+https://egghead.io/lessons/react-build-a-jsx-live-compiler-as-a-react-component
+https://www.w3schools.com/react/react_css.asp
+
+https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
+
+https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer

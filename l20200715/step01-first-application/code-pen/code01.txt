@@ -1,0 +1,37 @@
+ function Person() {
+   return (
+     <div className="person">
+       <h1>Mike Bor</h1>
+       <p>Age: 24</p>
+     </div>
+   );
+ }
+
+ReactDOM.render(<Person name="bob marly" age="32" />, document.querySelector("#p1"));
+
+
+
+style
+=====
+.person {
+  display: inline-block;
+  margin 10px;
+  border: 1px solid #aaa;
+  padding: 20px;
+  box-shadow: 0 2px 2px #ccc;
+  width: 200px;  
+}
+
+
+html
+====
+<div id="p1"></div>
+<!-- <div class="person">
+  <h1>Mike Bor</h1>
+  <p>Age: 24</p>
+</div>
+ -->
+<div class="person">
+  <h1>Bill Shor</h1>
+  <p>Age: 29</p>
+</div>

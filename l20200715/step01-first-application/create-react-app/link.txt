@@ -1,0 +1,27 @@
+npx create-react-app my-app
+cd my-app
+npm start
+
+
+https://reactjs.org/docs/create-a-new-react-app.html#create-react-app
+
+https://github.com/facebook/create-react-app
+https://create-react-app.dev/
+https://github.com/nitishdayal/cra_closer_look
+
+
+
+for production
+npm run build
+
+
+
+
+
+
+
+
+
+
+
+https://www.npmjs.com/package/npx#shell-auto-fallback
