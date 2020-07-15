@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+    <h1>Hello React</h1>
+    <div id="root"></div>
+    <!-- <script>
+        let y = <p>Hi</p>
+    </script> -->
+    <script type="text/babel">
+        // JSX <h4>Go</h4>
+        // let list = <ul><li>I learn React</li><li>I Learn ReactDOM</li></ul>
+        //    var ulist = React.createElement("ul", null, 
+        //                  React.createElement('li' , null , 'I learn react'),
+        //                  React.createElement('li' , null , 'I learn reactDOM')
+        //           );
+        //console.log(ulist)
+        // ReactDOM.render(list, document.getElementById('root'))
+        ReactDOM.render(<Mylist />, document.getElementById('root'))
+
+        function Mylist() {
+            return (
+                <ul>
+                    <li>I learn React</li>
+                    <li>I Learn ReactDOM</li>
+                </ul>
+            )
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
