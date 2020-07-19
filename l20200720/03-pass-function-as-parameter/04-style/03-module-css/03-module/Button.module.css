@@ -1,0 +1,20 @@
+.btn {
+  border: 1px solid blue;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+.btn_primary {
+  background-color: aqua;
+}
+
+
+
+.allPara {
+  color: green;
+}

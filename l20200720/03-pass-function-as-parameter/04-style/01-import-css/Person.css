@@ -1,0 +1,16 @@
+.Person {
+    width: 60%;
+    margin: 1em auto;
+    border: 1px solid #eee;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 2px 3px #ccc;
+    padding: 1em;  /* 16px */
+    text-align: center;
+  }
+  
+  /* we have to import it in Person component */
+  /* the tools will inject the css in index.html */
+  
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+  /* https://www.cssmatic.com/box-shadow */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator */
