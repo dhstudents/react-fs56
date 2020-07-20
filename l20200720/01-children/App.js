@@ -7,9 +7,7 @@ export default function App() {
     <div className="App">
       <Person name="Danny" age="65" />
 {/* simple */}
-      <Person name="David" age="15">
-        My Hobbies: Reading Tech Books
-      </Person>
+      <Person name="David" age="15">My Hobbies: Reading Tech Books</Person>
 {/* tree */}
       <Person name="Rebeka" age="25">
         <ol>

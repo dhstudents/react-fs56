@@ -22,8 +22,8 @@ export default class App extends React.Component {
         <button>Switch Name</button>
         <hr/ >
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].name} />
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].name} />
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
       </div>
     );
   }

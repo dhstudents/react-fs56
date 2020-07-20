@@ -12,9 +12,9 @@ class Person {
 
 const p = new Person(100, 'Koko Boten', 40)
 let str = p.details();
-let f_detaile = p.details;
+let f_details = p.details;
 
-str = f_detaile()
+str = f_details()
 
 
 console.log(str)
