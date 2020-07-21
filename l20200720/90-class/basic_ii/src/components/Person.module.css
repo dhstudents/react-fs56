@@ -1,0 +1,13 @@
+.btn {
+    background-color: aqua;
+    color: brown;
+}
+.btn:hover {
+    background-color: brown;
+    color: aqua;
+}
+
+.abox {
+    outline: 1px solid blue;
+}
+
