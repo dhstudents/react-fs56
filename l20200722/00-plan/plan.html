@@ -1,0 +1,237 @@
+<!-- https://mariosfakiolas.com/blog/my-react-components-render-twice-and-drive-me-crazy/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React for FS56</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, .5)
+        }
+
+        a {
+            color: linen;
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>React getting started</h1>
+    <hr>
+    <ol>
+        <li>Rendering Lists</li>
+        <li >Conditional Rendering</li>
+        <li>Handling Events</li>
+        <li>Updating the state</li>
+        <li>Composing Components</li>
+        <li>Raise and handle Events</li>
+        <li>Multiple components in sync</li>
+        <hr>
+        <a style="color: red" title="go to codesandbox" href="https://codesandbox.io/s/dh-video-task-42qxs?file=/src/components/02-CountesVersions/08-lift-state-to-app/App.js">codesandbox app</a>
+
+    </ol>
+    <template>
+        <h1></h1>
+        <h2></h2>
+        <ol>
+            <li>Go TO: <a target="_blank" href="https://reactjs.org/docs/getting-started.html">React getting started</a>
+            </li>
+            <li>add some interactivity to a simple HTML page</li>
+            <li>start a complex React-powered app</li>
+        </ol>
+    </template>
+    <!-- <div hidden> -->
+    <template>
+        <h1>First Application</h1>
+        <ol>
+            <li title="logic to create the components">Add <a
+                    href="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js"
+                    target="_blank">React</a> lib</li>
+            <li title="render the component to the real DOM">Add <a
+                    href="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js"
+                    target="_blank">React-dom</a> lib</li>
+            <li title="Javascript preprocesor for ESNext">Add <a href="https://unpkg.com/@babel/standalone/babel.min.js"
+                    target="_blank">babel</a> for new features implemented in React</li>
+        </ol>
+    </template>
+    <!-- <div hidden> -->
+    <template>
+        <h1>Creating a function componenr</h1>
+        <pre>
+            &lt;div id="p1"&gt;&lt;/div&gt;
+
+            function Person() {
+                render(
+                    &lt;div class="person"&gt;
+                        &lt;h1>Mike Bor&lt;/h1&gt;
+                        &lt;p>Age: 24&lt;/p&gt;
+                    &lt;/div&gt;
+                )
+                // renders the component into the dom 
+                // ReactDOM see Person function as &lt;Person /&gt; element custom tag
+                ReactDOM.render(<Person />, documnet.querySelector('#p1')) 
+                //  (*pay attention for losing style)
+                //  (*change class="person" to className="person")
+               
+            }
+        </pre>
+    </template>
+    <!-- <div hidden> -->
+    <template>
+        <h1>Local setup</h1>
+        <pre style="font-size: 8px">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;script src="https://unpkg.com/react@16/umd/react.development.js"&gt;&lt;/script&gt;
+  &lt;script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"&gt;&lt;/script&gt;
+
+  &lt;!-- Don't use this in production: --&gt;
+  &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;
+  &lt;script type="text/babel"&gt;
+
+  var x = &lt;h1 myname="doni"&gt;hello&lt;/h1&gt;
+  console.log(x.props)
+  &lt;/script&gt;
+  &lt;style&gt;
+    .corona {
+      border: 1px solid black;
+      padding: 20px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, autem. Molestias, tenetur id ea maxime pariatur recusandae rerum modi iusto, sunt eum veritatis quaerat dolores consequuntur! In, totam. Doloremque nihil autem doloribus ducimus, id sed neque at vel. Dolore, nihil!&lt;/div&gt;
+  &lt;div id="root"&gt;&lt;/div&gt;
+  &lt;div&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, autem. Molestias, tenetur id ea maxime pariatur recusandae rerum modi iusto, sunt eum veritatis quaerat dolores consequuntur! In, totam. Doloremque nihil autem doloribus ducimus, id sed neque at vel. Dolore, nihil!&lt;/div&gt;
+  &lt;script type="text/babel"&gt;
+    // ReactDOM.render(
+    //   &lt;h1&gt;Hello, world!&lt;/h1&gt;,
+    //   document.getElementById('root')
+    // );
+    ReactDOM.render(
+      &lt;Covid19 /&gt;,
+      document.getElementById('root')
+    );
+    function Covid19() {
+      return (
+        &lt;div className="corona"&gt;
+          &lt;h1&gt;Number of COVID19&lt;/h1&gt;
+          &lt;h2&gt;Well Done&lt;/h2&gt;
+        &lt;/div&gt;
+      )
+    }
+  &lt;/script&gt;
+  &lt;!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </template>
+    <!-- <div hidden> -->
+    <template>
+        <h1>Create React App</h1>
+        <pre>
+            npx create-react-app my-app
+            cd my-app
+            npm start
+        </pre>
+        <br>
+        <a href="javascript:window.open(https://github.com/facebook/create-react-app)" >In Github repo</a>
+    </template>
+    <template>
+        <a href="https://stackblitz.com/edit/fs56-react-gettingstarted?file=index.js">StackBlitz</a>
+    </template>
+    <template>
+        <a href="https://codesandbox.io/s/gallant-cartwright-dy7xv?file=/src/App.js">CodeSandBox</a>
+    </template>
+    <template>
+       <pre>
+        import React from "react";
+        import "./styles.css";
+        
+        import Greet from './components/Greet.js'
+        
+        export default function App() {
+          return (
+            &lt;&gt;
+            &lt;h1 className="App"&gt;Hello React&lt;/h1&gt;
+            &lt;Greet /&gt;
+            &lt;/&gt;
+          );
+        }
+       </pre>
+    </template>
+    <template>
+        <pre>
+            import React , { Component} from 'react';
+            export default class Greet extends Component {
+                render() {
+                       return (
+                           &lt;&gt;
+                               &lt;h2&gt;I bless U&lt;/h2&gt;
+                               &lt;hr /&gt;
+                               &lt;p&gt;Blah Blah&lt;/p&gt;
+                           &lt;/&gt;
+                       )
+                }
+            }
+        </pre>
+    </template>
+    </div>
+
+    <script>
+        document.querySelector('ol').addEventListener('click', showSlide)
+
+        function showSlide(e) {
+            const p = e.target.parentElement
+            const index = Array.from(p.children).indexOf(e.target)
+            // const slide = document.querySelector('#slides').children[index];
+            const template = document.querySelectorAll('template')[index];
+            const slide = document.createElement('div');
+            // slide.appendChild(template.content.cloneNode(true))
+            slide.appendChild(document.importNode(template.content, true))
+            
+            slide.style.overflow = "auto"
+            slide.style.position = 'absolute'
+            slide.style.top = 0;
+            slide.style.left = 0;
+            slide.style.width = '100vw';
+            slide.style.height = '100vh';
+            slide.style.zIndex = 10;
+            slide.style.color = 'rgba(255,255,255,1)';
+            slide.title = 'Double click to close';
+
+            slide.style.backgroundColor = 'rgba(0,0,0,1)';
+            slide.addEventListener('dblclick', (e) => {
+                // slide.hidden = true;
+                slide.remove()
+            })
+            document.body.appendChild(slide)
+            //  slide.hidden = false;
+        }
+    </script>
+</body>
+
+</html>
